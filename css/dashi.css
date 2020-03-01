@@ -53,5 +53,5 @@
 }
 
 .bg-primary{
-    background-color: #006FE6; /*accessibility fix*/
+    background-color: #006FE6!important; /*accessibility fix*/
 }

@@ -333,10 +333,6 @@ var dashi = (function () {
         g_chart_timeline.data = get_chart_timeline_data();
     }
 
-    am4core.ready(function () {
-        init_charts();
-    }); // end am4core.ready()
-
     var bind_format_button = function () {
         // bind format button
         document.addEventListener('click', function (event) {
@@ -395,12 +391,21 @@ var dashi = (function () {
         }, 60000 * dashiSpices.get_reload_rate()); // refresh page every 60 mins
 
     };
+    var start_initial_draw = function () {
+        setTimeout(function () {
+            console.log("INFO: Refreshing...");
+            am4core.ready(function () {
+                init_charts();
+            }); // end am4core.ready()
+        }, 1000); // refresh page every 60 mins
+    };
     var start = function () {
         bind_format_button();
         bind_open_formatter_button();
         bind_refresh_data_button();
         start_refresh_scheduledtask();
         start_reload_scheduledtask();
+        start_initial_draw();
     }
     return {
         init: init_charts,

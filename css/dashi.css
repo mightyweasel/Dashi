@@ -55,3 +55,7 @@
 .bg-primary{
     background-color: #006FE6!important; /*accessibility fix*/
 }
+
+.btn-primary{
+    background-color: #006FE6!important; /*accessibility fix*/
+}

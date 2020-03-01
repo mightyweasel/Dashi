@@ -392,12 +392,12 @@ var dashi = (function () {
 
     };
     var start_initial_draw = function () {
-        setTimeout(function () {
-            console.log("INFO: Refreshing...");
-            am4core.ready(function () {
-                init_charts();
-            }); // end am4core.ready()
-        }, 1000); // refresh page every 60 mins
+        //setTimeout(function () {
+        console.log("INFO: amChart Init...");
+        am4core.ready(function () {
+            init_charts();
+        }); // end am4core.ready()
+        //}, 1000); // refresh page every 60 mins
     };
     var start = function () {
         bind_format_button();
